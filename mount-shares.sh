@@ -13,3 +13,4 @@ for SHARE in "${SHARES[@]}"; do
 done
 
 echo "✨ All set. Happy trails."
+exit 0
