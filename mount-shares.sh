@@ -9,14 +9,9 @@ SHARES=(
 echo "🚀 Initiating vibe-check on Samba shares..."
 
 for SHARE in "${SHARES[@]}"; do
-    # Check if already mounted to avoid duplicates
-    if mount | grep -q "$SHARE"; then
-        echo "✅ $SHARE is already vibing with your system."
-    else
-        echo "🔗 Connecting to $SHARE..."
-        # The AppleScript magic
-        osascript -e "mount volume \"$SHARE\""
-    fi
+    echo "🔗 Connecting to $SHARE..."
+    # The AppleScript magic
+    osascript -e "mount volume \"$SHARE\""
 done
 
 echo "✨ All set. Happy trails."
